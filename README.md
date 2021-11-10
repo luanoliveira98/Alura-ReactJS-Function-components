@@ -14,3 +14,12 @@
  - Installing packages via NPM in our project
  - Advantages of using MaterialUI
  - Why using a design system makes our lives easier
+
+ ### Using MaterialUI
+
+ - How to find yourself in the MaterialUI documentation
+ - How to use various components with MaterialUI
+ - More **TextField** properties
+ - How to use a container to help position elements
+ - Using typography elements
+ - MaterialUI Switches and FormLabelControl
