@@ -31,3 +31,11 @@
  - Hooks and useState
  - **Array** deconstruction
  - Asynchronicity of the state assignment function
+
+ ### Hooks Rules
+
+ - What are rules for using Hooks
+ - Checked property for Switches
+ - Creating more states and the way to work with them in function components
+ - How to receive properties in a function component
+ - Object deconstruction in JS

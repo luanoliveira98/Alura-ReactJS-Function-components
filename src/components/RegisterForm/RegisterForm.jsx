@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import {Button, TextField, Switch, FormControlLabel } from '@material-ui/core';
 
-function RegisterForm() {
+function RegisterForm({onSubmit}) {
     const [name, setName] = useState("");
     const [lastName, setLastName] = useState("");
     const [cpf, setCPF] = useState("");
+    const [promotions, setPromotions] = useState(true);
+    const [newsletter, setNewsletter] = useState(false);
     return(
         <form 
             onSubmit={event => {
                 event.preventDefault();
-                console.log(name, lastName, cpf);
+                onSubmit({name, lastName, cpf, promotions, newsletter})
             }}
         >
             <TextField 
@@ -32,11 +34,25 @@ function RegisterForm() {
 
             <FormControlLabel 
                 label="Promotions" 
-                control={<Switch name="promotions" defaultChecked color="primary"/>} 
+                control={
+                    <Switch 
+                        name="promotions" color="primary" checked={promotions}
+                        onChange={event => {
+                            setPromotions(event.target.checked);
+                        }}
+                    />
+                }
             />
             <FormControlLabel 
                 label="Newsletter" 
-                control={<Switch name="newsletter" color="primary"/>} 
+                control={
+                    <Switch 
+                        name="newsletter" checked={newsletter} color="primary"
+                        onChange={event => {
+                            setNewsletter(event.target.checked);
+                        }}
+                    />
+                }
             />
 
             <Button variant="contained" color="primary" type="submit">Register</Button>
