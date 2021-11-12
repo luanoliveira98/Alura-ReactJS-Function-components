@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <Container component="article" maxWidth="sm">
         <Typography variant="h3" component="h1" align="center">Register form</Typography>
-        <RegisterForm onSubmit={onSubmit}/>
+        <RegisterForm onSubmit={onSubmit} validCPF={validCPF}/>
       </Container>
     );
   }
@@ -18,6 +18,14 @@ class App extends Component {
 
 function onSubmit(data) {
   console.log(data);
+}
+
+function validCPF(cpf) {
+  if(cpf.length !== 11) {
+    return {valid: false, helperText: "CPF must have 11 digits!"};
+  } else {
+    return {valid: true, helperText: ""};
+  }
 }
 
 export default App;

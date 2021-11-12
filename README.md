@@ -39,3 +39,10 @@
  - Creating more states and the way to work with them in function components
  - How to receive properties in a function component
  - Object deconstruction in JS
+
+ ### Error handling
+
+ - Error property of TextField and HelperText inside MaterialUI
+ - Using state to control error display
+ - Receiving validation externally
+ - How to make components more reusable
